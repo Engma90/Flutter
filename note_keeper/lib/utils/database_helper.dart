@@ -67,7 +67,7 @@ class DatabaseHelper {
 
   Future<Database> _initializeDatabase() async {
     Directory directory = await getApplicationDocumentsDirectory();
-    String path = '${directory.path}notes.db';
+    String path = '${directory.path}/notes.db';
     print(path);
     var noteDatabase =
         await openDatabase(path, version: 1, onCreate: _createDatabase);
